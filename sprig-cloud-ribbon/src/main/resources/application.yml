@@ -1,0 +1,27 @@
+# 端口与日志
+server:
+  port: 8092
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-ribbon
+
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+
+service-url:
+  ribbon-provider-service: http://spring-cloud-ribbon-provider
