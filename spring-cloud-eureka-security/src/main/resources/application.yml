@@ -1,0 +1,33 @@
+# 端口与日志
+server:
+  port: 8083
+  tomcat:
+    uri-encoding: UTF-8
+    accesslog:
+      enabled: true
+      request-attributes-enabled: true
+      directory: logs
+      pattern: commonopen
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-eureka
+  security:
+    user:
+      name: root
+      password: root
+
+
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8083/eureka
+
+
