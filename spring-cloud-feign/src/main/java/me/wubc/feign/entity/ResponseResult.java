@@ -1,12 +1,14 @@
 package me.wubc.feign.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author wbc
  * @date 2020/05/15
  * @desc
  **/
+@NoArgsConstructor
 @Data
 public class ResponseResult<T> {
 
