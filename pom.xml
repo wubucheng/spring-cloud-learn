@@ -11,8 +11,7 @@
     <modules>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-eureka-client</module>
-        <module>sprig-cloud-ribbon</module>
-        <module>spring-cloud-ribbon-provider</module>
+        <module>spring-cloud-eureka-security</module>
     </modules>
 
     <parent>
@@ -44,15 +43,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 
     <dependencyManagement>
