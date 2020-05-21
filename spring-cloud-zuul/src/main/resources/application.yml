@@ -1,0 +1,39 @@
+# 端口与日志
+server:
+  port: 8099
+  tomcat:
+    uri-encoding: UTF-8
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-zuul
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+zuul:
+  routes:
+    # 微服务名称
+    spring-cloud-ribbon-provider:
+      # 路径映射，即当调用或游览器输入包含user-provider路径时，会自动转发到spring-cloud-ribbon-provider这个微服务
+      # http://localhost:8099/user-provider/user/getByUsername?username=1
+      path: /user-provider/**
+    spring-cloud-feign:
+      path: /feign-user/**
+    prefix: /
+    # 过滤掉敏感的请求头信息，防止路由时丢失
+    sensitive-headers: Cookie,Set-Cookie,Authorization
+    # 设置请求头
+    add-host-header: 'true'
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: 'routes'

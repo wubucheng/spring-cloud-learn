@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import me.wubc.feign.entity.ResponseResult;
 import me.wubc.feign.entity.UserPo;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -12,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @desc
  **/
 @Slf4j
-public class UserFallbackService {
+@Component
+public class UserFallbackService implements UserService {
 
+    @Override
     public ResponseResult<UserPo> getByUsername(String username) {
-        log.error("通过用户名获取用户失败");
+        log.error("通过用户名获取用户失败,进行服务降级");
         return new ResponseResult("通过用户名获取用户失败", 500);
     }
 }

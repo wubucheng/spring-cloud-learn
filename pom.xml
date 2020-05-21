@@ -17,6 +17,7 @@
         <module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-hystrix-turbine</module>
         <module>spring-cloud-feign</module>
+        <module>spring-cloud-zuul</module>
     </modules>
 
     <parent>

@@ -1,6 +1,6 @@
 # 端口与日志
 server:
-  port: 8098
+  port: 8075
   tomcat:
     uri-encoding: UTF-8
     accesslog:
@@ -14,9 +14,7 @@ server:
 # 应用信息
 spring:
   application:
-    name: spring-cloud-feign
-
-
+    name: spring-cloud-ribbon-provider
 
 eureka:
   client:
@@ -24,12 +22,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8080/eureka
-
-
-
-feign:
-  hystrix:
-    enabled: true
-logging:
-  level:
-    me.wubc.feign.service: debug
