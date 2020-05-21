@@ -1,0 +1,34 @@
+# 端口与日志
+server:
+  port: 8098
+  tomcat:
+    uri-encoding: UTF-8
+    accesslog:
+      enabled: true
+      request-attributes-enabled: true
+      directory: logs
+      pattern: commonopen
+
+
+
+# 应用信息
+spring:
+  application:
+    name: hystrix-dashboard
+
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+turbine:
+  # 需要进行监控的服务名称
+  app-config: spring-cloud-hystrix
+  # 服务所属集群
+  cluster-name-expression: new String('default')
+  # 根据主机和端口号区分服务
+  combine-host-port: true

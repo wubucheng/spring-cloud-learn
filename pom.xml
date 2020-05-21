@@ -11,7 +11,12 @@
     <modules>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-eureka-client</module>
-        <module>spring-cloud-eureka-security</module>
+        <module>sprig-cloud-ribbon</module>
+        <module>spring-cloud-ribbon-provider</module>
+        <module>spring-cloud-hystrix</module>
+        <module>spring-cloud-hystrix-dashboard</module>
+        <module>spring-cloud-hystrix-turbine</module>
+        <module>spring-cloud-feign</module>
     </modules>
 
     <parent>
@@ -31,6 +36,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,6 +52,19 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

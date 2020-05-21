@@ -6,8 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-hystrix-dashboard" />
+        <module name="spring-cloud-feign" />
+        <module name="spring-cloud-hystrix" />
+        <module name="spring-cloud-ribbon-provider" />
         <module name="spring-cloud-eureka" />
+        <module name="sprig-cloud-ribbon" />
         <module name="spring-cloud-eureka-security" />
+        <module name="spring-cloud-hystrix-turbine" />
         <module name="spring-cloud-eureka-client" />
       </profile>
     </annotationProcessing>
@@ -17,6 +23,10 @@
       <module name="spring-cloud-eureka" options="-parameters" />
       <module name="spring-cloud-eureka-client" options="-parameters" />
       <module name="spring-cloud-eureka-security" options="-parameters" />
+      <module name="spring-cloud-feign" options="-parameters" />
+      <module name="spring-cloud-hystrix" options="-parameters" />
+      <module name="spring-cloud-hystrix-dashboard" options="-parameters" />
+      <module name="spring-cloud-hystrix-turbine" options="-parameters" />
       <module name="spring-cloud-learn" options="-parameters" />
     </option>
   </component>
