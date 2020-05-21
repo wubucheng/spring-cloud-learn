@@ -1,0 +1,36 @@
+# 端口与日志
+server:
+  port: 8095
+  tomcat:
+    uri-encoding: UTF-8
+    accesslog:
+      enabled: true
+      request-attributes-enabled: true
+      directory: logs
+      pattern: commonopen
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-hystrix
+
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+service-url:
+  ribbon-provider-service: http://spring-cloud-ribbon-provider
+
+managemnt:
+  endpoints:
+    web:
+      exposure:
+        include: "hystrix.stream"
