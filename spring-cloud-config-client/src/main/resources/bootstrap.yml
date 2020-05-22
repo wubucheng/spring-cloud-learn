@@ -1,0 +1,37 @@
+# 端口与日志
+server:
+  port: 8061
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      # 分支名称
+      label: master
+      # 配置文件后缀名称
+      profile: dev
+      #  配置文件名称
+      name: application
+      # 配置中心地址
+      uri: http://localhost:8060
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,31 @@
+# 端口与日志
+server:
+  port: 8062
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-config-security
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wubucheng/spring-cloud-config-demo.git
+          username: wubucheng
+          password: 123456
+          clone-on-start: true
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+

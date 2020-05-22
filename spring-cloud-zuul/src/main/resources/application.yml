@@ -31,6 +31,10 @@ zuul:
     sensitive-headers: Cookie,Set-Cookie,Authorization
     # 设置请求头
     add-host-header: 'true'
+    # ZuulPreLogFilter是我们自定义过滤器的名称
+    ZuulPreLogFilter:
+      pre:
+        disable: true
 
 management:
   endpoint:
