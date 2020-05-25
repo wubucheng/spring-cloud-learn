@@ -1,0 +1,37 @@
+# 端口与日志
+server:
+  port: 8063
+  tomcat:
+    uri-encoding: UTF-8
+
+
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wubucheng/spring-cloud-config-demo.git
+          username: wubucheng
+          password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    fetch-registry: false
+    register-with-eureka: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
+
