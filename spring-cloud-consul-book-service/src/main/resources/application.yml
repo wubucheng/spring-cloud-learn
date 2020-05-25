@@ -1,0 +1,25 @@
+# 端口与日志
+server:
+  port: 8067
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-consul-book-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: spring-cloud-consul-book-service
+
+
+
+
+
+
