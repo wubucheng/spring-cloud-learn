@@ -1,0 +1,23 @@
+server:
+  port: 8069
+
+spring:
+  application:
+    name: consul-config-client
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: consul-config-client
+      config:
+        # 启用配置中心功能
+        enabled: true
+        # 配置值的格式
+        format: yaml
+        # 配置所在的目录
+        prefix: config
+        # 配置的分隔符
+        profile-separator: ':'
+        # 配置key的名字
+        data-key: data

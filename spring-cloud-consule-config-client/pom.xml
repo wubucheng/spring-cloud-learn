@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-consul-config-client</artifactId>
+    <artifactId>spring-cloud-consule-config-client</artifactId>
+    <description>consule作为配置中心的例子</description>
 
     <dependencies>
         <dependency>
@@ -21,6 +22,5 @@
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>

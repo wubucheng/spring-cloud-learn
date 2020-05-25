@@ -24,6 +24,7 @@
         <module>spring-cloud-consul-book-service</module>
         <module>spring-cloud-consul-ribbon</module>
         <module>spring-cloud-consul-config-client</module>
+        <module>spring-cloud-consule-config-client</module>
     </modules>
 
     <parent>
