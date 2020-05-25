@@ -5,12 +5,13 @@
     <file url="file://$PROJECT_DIR$/spring-cloud-config-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-consul-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-consul-config-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-consul-ribbon/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-cloud-consule-config-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix-dashboard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix-turbine/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix/src/main/java" charset="UTF-8" />
