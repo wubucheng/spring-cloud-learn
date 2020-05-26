@@ -1,0 +1,10 @@
+server:
+  port: 8076
+
+spring:
+  application:
+    name: spring-cloud-admin-server
+  boot:
+    admin:
+      client:
+        url: http://localhost:8075

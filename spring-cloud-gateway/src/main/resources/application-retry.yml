@@ -1,0 +1,33 @@
+server:
+  port: 8073
+  tomcat:
+    uri-encoding: UTF-8
+
+service-url:
+  user-service: http://localhost:8085
+
+
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: retry_route
+          # 该URI是精准匹配，后面的URI不会被识别
+          uri: ${service-url.user-service}
+          predicates:
+            - Method=GET
+          filters:
+            - name: Retry
+              args:
+                # 重试次数
+                retries: 2
+                # 触发重试的条件
+                statuses: BAD_GATEWAY
+                backoff:
+                  firstBackoff: 10ms
+                  maxBackoff: 50ms
+                  factor: 2
+                  baseOnPreviousValue: false
+

@@ -1,0 +1,36 @@
+server:
+  port: 8072
+  tomcat:
+    uri-encoding: UTF-8
+
+service-url:
+  user-service: http://localhost:8085
+
+
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: redis_route
+          uri: ${service-url.user-service}/user/getByUsername?username={name}
+          predicates:
+            - Method=GET
+          filter:
+            - name: RequestRateLimiter
+              args:
+                # 每秒允许处理的请求数量
+                redis-rate-limiter.replenishRate: 1
+                # 每秒最大处理的请求数量
+                redis-rate-limiter.burstCapacity: 2
+                # 限流策略
+                key-resolver: "#/{@ipKeyResolver}"
+
+  redis:
+    host: localhost
+    port: 6379
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

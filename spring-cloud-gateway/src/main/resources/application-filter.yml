@@ -1,0 +1,26 @@
+server:
+  port: 8071
+  tomcat:
+    uri-encoding: UTF-8
+
+service-url:
+  user-service: http://localhost:8085
+
+
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: hystrix_route
+          # 该URI是精准匹配，后面的URI不会被识别
+          uri: ${service-url.user-service}
+          predicates:
+            - Method=GET
+          filters:
+            - name: Hystrix
+              args:
+                name: fallbackcmd
+                fallback-uri: forward:/fallback
+

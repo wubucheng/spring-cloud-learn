@@ -1,0 +1,32 @@
+server:
+  port: 8074
+  tomcat:
+    uri-encoding: UTF-8
+
+service-url:
+  user-service: http://localhost:8085
+
+
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: prefixpath_route
+          uri: ${service-url.user-service}
+          filters:
+            - PrefixPath=/user
+          predicates:
+            - Method=GET
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka

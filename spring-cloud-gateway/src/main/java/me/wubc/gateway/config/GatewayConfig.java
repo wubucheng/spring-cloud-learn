@@ -14,13 +14,6 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 public class GatewayConfig {
-//    @Bean(name="conversionService")
-//    public ConversionService getConversionService() {
-//        ConversionServiceFactoryBean bean = new ConversionServiceFactoryBean();
-////        bean.setConverters(...); //add converters
-//        bean.afterPropertiesSet();
-//        return bean.getObject();
-//    }
 
     @Bean
     public RouteLocator customerRouteLocator(RouteLocatorBuilder builder) {

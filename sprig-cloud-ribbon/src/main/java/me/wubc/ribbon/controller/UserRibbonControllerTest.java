@@ -31,4 +31,11 @@ public class UserRibbonControllerTest {
                 ResponseResult.class, username);
     }
 
+//    @GetMapping("/testGateWay")
+//    public void testGateWay() {
+//        for (int i = 0; i < 10; i++) {
+//            restTemplate.getForObject("http://localhost:8072/user/getByUsername?username=1", String.class);
+//        }
+//    }
+
 }
