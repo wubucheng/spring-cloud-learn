@@ -7,15 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-cloud-hystrix-dashboard" />
-        <module name="spring-cloud-hystrix-turbine" />
+        <module name="spring-cloud-config-security" />
         <module name="spring-cloud-eureka" />
         <module name="spring-cloud-config" />
         <module name="sprig-cloud-ribbon" />
         <module name="spring-cloud-zuul" />
-        <module name="spring-cloud-config-security" />
         <module name="spring-cloud-consul-ribbon" />
         <module name="spring-cloud-eureka-client" />
         <module name="spring-cloud-consul" />
+        <module name="spring-cloud-hystrix-turbine" />
         <module name="spring-cloud-gateway" />
         <module name="spring-cloud-consul-book-service" />
         <module name="spring-cloud-eureka-security" />
@@ -23,6 +23,7 @@
         <module name="spring-cloud-feign" />
         <module name="spring-cloud-ribbon-provider" />
         <module name="spring-cloud-hystrix" />
+        <module name="spring-cloud-consul-config-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,7 +38,6 @@
       <module name="spring-cloud-config-security" options="-parameters" />
       <module name="spring-cloud-consul" options="-parameters" />
       <module name="spring-cloud-consul-book-service" options="-parameters" />
-      <module name="spring-cloud-consul-config-client" options="-parameters" />
       <module name="spring-cloud-consul-ribbon" options="-parameters" />
       <module name="spring-cloud-eureka" options="-parameters" />
       <module name="spring-cloud-eureka-client" options="-parameters" />

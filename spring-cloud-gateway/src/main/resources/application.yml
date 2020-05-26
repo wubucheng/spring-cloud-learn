@@ -14,7 +14,7 @@ spring:
     gateway:
       routes:
         - id: path_route
-          uri: ${service-url.user-service}/user/getByUsername{name}
+          uri: ${service-url.user-service}/user/getByUsername?username={name}
           predicates:
             - Path=/user/getByUsername
 
