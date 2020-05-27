@@ -8,24 +8,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-cloud-admin-server" />
         <module name="spring-cloud-hystrix-dashboard" />
-        <module name="spring-cloud-hystrix-turbine" />
+        <module name="spring-cloud-config-security" />
         <module name="spring-cloud-eureka" />
         <module name="spring-cloud-config" />
         <module name="sprig-cloud-ribbon" />
-        <module name="spring-cloud-zuul" />
-        <module name="spring-cloud-config-security" />
+        <module name="spring-cloud-consul" />
+        <module name="spring-cloud-admin-security-server" />
         <module name="spring-cloud-consul-ribbon" />
         <module name="spring-cloud-eureka-client" />
-        <module name="spring-cloud-consul" />
+        <module name="spring-cloud-config-client" />
+        <module name="spring-cloud-zuul" />
         <module name="spring-cloud-admin-client" />
         <module name="spring-cloud-gateway" />
         <module name="spring-cloud-consul-config-client" />
         <module name="spring-cloud-consul-book-service" />
         <module name="spring-cloud-eureka-security" />
-        <module name="spring-cloud-config-client" />
-        <module name="spring-cloud-hystrix" />
-        <module name="spring-cloud-ribbon-provider" />
+        <module name="spring-cloud-hystrix-turbine" />
         <module name="spring-cloud-feign" />
+        <module name="spring-cloud-ribbon-provider" />
+        <module name="spring-cloud-hystrix" />
       </profile>
     </annotationProcessing>
   </component>
@@ -33,6 +34,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="sprig-cloud-ribbon" options="-parameters" />
       <module name="spring-cloud-admin-client" options="-parameters" />
+      <module name="spring-cloud-admin-security-server" options="-parameters" />
       <module name="spring-cloud-admin-server" options="-parameters" />
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />
