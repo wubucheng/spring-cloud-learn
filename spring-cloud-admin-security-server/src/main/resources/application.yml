@@ -1,0 +1,23 @@
+server:
+  port: 8076
+
+spring:
+  application:
+    name: spring-cloud-security-admin-server
+  security:
+    user:
+      # 配置登录用户名和密码
+      name: root
+      password: 123456
+    boot:
+      admin:
+        discovery:
+          # 不显示自身的监控信息
+          ignored-services: ${spring.application.name}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka

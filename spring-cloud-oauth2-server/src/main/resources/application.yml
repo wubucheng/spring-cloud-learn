@@ -1,0 +1,8 @@
+server:
+  port: 8077
+
+
+spring:
+  application:
+    name: spring-cloud-oauth2-server
+

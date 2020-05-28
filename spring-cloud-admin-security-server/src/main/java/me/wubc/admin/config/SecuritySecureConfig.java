@@ -13,7 +13,8 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
  * @desc
  */
 @Configuration
-public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
+public class
+SecuritySecureConfig extends WebSecurityConfigurerAdapter {
 
     private final String adminContextPath;
 
