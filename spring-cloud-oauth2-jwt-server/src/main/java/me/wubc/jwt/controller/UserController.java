@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.netty.util.internal.StringUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,12 +28,17 @@ public class UserController {
     public Object getCurrentUser(Authentication authentication, HttpServletRequest request) {
         String header = request.getHeader("Authorization");
         String token = header.substring(6);
-        log.info("token is {} ", token);
         Claims body = Jwts.parser()
                 .setSigningKey("test_key".getBytes(StandardCharsets.UTF_8))
                 .parseClaimsJws(token)
                 .getBody();
 
         return body;
+    }
+
+    @PreAuthorize("hasAuthority('admin')")
+    @GetMapping("/auth/admin")
+    public Object adminAuth(){
+        return "Has admin auth";
     }
 }

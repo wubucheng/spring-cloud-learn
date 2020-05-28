@@ -1,0 +1,27 @@
+server:
+  port: 8079
+  servlet:
+    session:
+      cookie:
+        name: OAUTH2_CLIENT_SESSIONID
+
+spring:
+  application:
+    name: spring-cloud-oauth2-client
+
+# 授权服务器地址
+oauth2-server-url: http://localhost:8078
+
+
+security:
+  oauth2:
+    client:
+      client-id: admin
+      client-secret: 123456
+      # 授权地址
+      user-authorization-uri: ${oauth2-server-url}/oauth/authorize
+      # token获取地址
+      access-token-uri: ${oauth2-server-url}/oauth/token
+    resource:
+      jwt:
+        key-uri: ${oauth2-server-url}/oauth/token_key

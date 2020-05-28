@@ -12,6 +12,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -79,11 +80,18 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 设置刷新token的有效期
                 .refreshTokenValiditySeconds(60 * 60 * 24)
                 // 授权成功后跳转地址
-                .redirectUris("http://www.baidu.com")
+                .redirectUris("http://localhost:8079/login")
+                // 自动授权
+                .autoApprove(true)
                 // 权限范围
                 .scopes("all")
                 // 授权类型
-                .authorizedGrantTypes("authorization_code", "password","refresh_token");
+                .authorizedGrantTypes("authorization_code", "password", "refresh_token");
+    }
+
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        // 获取秘钥需要身份证认证
+        security.tokenKeyAccess("isAuthenticated()");
     }
 
 
