@@ -29,6 +29,7 @@
         <module>spring-cloud-admin-client</module>
         <module>spring-cloud-admin-security-server</module>
         <module>spring-cloud-oauth2-server</module>
+        <module>spring-cloud-oauth2-jwt-server</module>
     </modules>
 
     <parent>
