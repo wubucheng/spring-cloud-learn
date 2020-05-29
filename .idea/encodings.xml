@@ -18,6 +18,9 @@
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix-dashboard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix-turbine/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-nacos-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-nacos-config-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-nacos-ribbon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-oauth2-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-oauth2-jwt-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-oauth2-server/src/main/java" charset="UTF-8" />

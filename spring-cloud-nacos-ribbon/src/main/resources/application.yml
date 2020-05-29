@@ -1,0 +1,30 @@
+# 端口与日志
+server:
+  port: 8051
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+
+# 应用信息
+spring:
+  application:
+    name: spring-cloud-nacos-ribbon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+
+
+
+
+
+service-url:
+  book-service: http://nacos-book-server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

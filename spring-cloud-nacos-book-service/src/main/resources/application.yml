@@ -1,0 +1,16 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: nacos-book-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
